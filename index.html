@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+  
+    <header>
+      <form>
+      <div>
+        <label for="user_password">password</label>
+        <input type="password" id="user_password" name="user_password" onkeyup='check();' required>
+      <span id="password_message"></span>
+      </div>
+      <br>
+
+      <div>
+        <label for="user_confirm_password">confirm password</label>
+        <input type="password" id="user_confirm_password" name="user_confirm_password" onkeyup='check();' required>
+      </div>
+
+        <div>
+          <button type="submit">Create Account</button>
+        </div>
+        </form>
+    </header>
+
+    <script>
+
+var check = function() {
+  if (document.getElementById('user_password').value ==
+    document.getElementById('user_confirm_password').value) {
+    document.getElementById('password_message').style.color = 'green';
+    document.getElementById('password_message').innerHTML = 'matching';
+  } else {
+    document.getElementById('password_message').style.color = 'red';
+    document.getElementById('password_message').innerHTML = 'not matching';
+  }
+}
+
+    </script>
+
+  </body>
+</html>
